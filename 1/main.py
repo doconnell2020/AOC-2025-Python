@@ -12,10 +12,11 @@ for line in lines:
     func = OPS[line[0]]
     val = int(line[1:])
     total = func(cur, val)
-    ans = total%100
+    ans = total % 100
     if ans == 0:
         res += 1
-    # res+= (total-ans)//100  # Cant figure part two
+    res += abs(total // 100)  # Cant figure part two
     cur = ans
+
 
 print(res)
