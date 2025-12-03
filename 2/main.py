@@ -20,3 +20,10 @@ def part_one(string: str):
 
 total = sum(ids)
 print(f"Part one is : {total}")
+
+def part_two(string: str):
+    a, b = string.split("-")
+    ns = [str(i) for i in range(int(a), int(b) + 1)]
+    for n in ns:
+        for i in n:
+            
